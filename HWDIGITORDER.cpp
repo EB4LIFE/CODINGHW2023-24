@@ -24,7 +24,7 @@ int main() {
 			break;
 		}
 		digit = prevleft; 
-		nextLeft = num % 10;
+		prevleft = num % 10;
 		if (digit >= prevleft) { 
 			lessthan = false; 
 			break; 
