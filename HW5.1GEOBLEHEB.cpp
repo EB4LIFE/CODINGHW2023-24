@@ -32,6 +32,15 @@ int main() {
 //Calling function of Rect area and outpiting results using user input
    Rectarea = Area(url, uwl);
    cout << Rectarea << endl;
-
+//Part 2 - same thing we did but with the circle function using user input variable ucr
+cout << "enter radius of cirlce:" << endl;
+cin >> ucr;
+//same as before checking to make sure it fits our parameters as whole non negative number
+while(ucr<=0) {
+  cout << "ERROR" << endl;
+       cin >> ucr;
+}
+Cirarea = Area(ucr);
+cout << Cirarea << endl;
 
 }
