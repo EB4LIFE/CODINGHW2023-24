@@ -18,7 +18,7 @@ double Area(int rad) {
 int main() {
     
     int rectarea;
-    int Cirarea;
+    double cirarea;
 //variables for user's Rect and circle respectively
     int url;
     int uwl;
