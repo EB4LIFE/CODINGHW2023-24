@@ -1,3 +1,8 @@
 #include<iostream>
 using namespace std;
-int main()
+
+int rectArea(int rl, int rw) {
+}
+
+int main() {
+}
