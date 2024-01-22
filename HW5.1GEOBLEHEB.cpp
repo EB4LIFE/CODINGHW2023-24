@@ -17,6 +17,8 @@ double Area(int rad) {
 
 int main() {
     
+    int rectarea;
+    int Cirarea;
 //variables for user's Rect and circle respectively
     int url;
     int uwl;
@@ -30,8 +32,8 @@ int main() {
        cin >> url >> uwl;
  }
 //Calling function of Rect area and outpiting results using user input
-   Rectarea = Area(url, uwl);
-   cout << Rectarea << endl;
+   rectarea = Area(url, uwl);
+   cout << rectarea << endl;
 //Part 2 - same thing we did but with the circle function using user input variable ucr
 cout << "enter radius of cirlce:" << endl;
 cin >> ucr;
@@ -40,8 +42,8 @@ while(ucr<=0) {
   cout << "ERROR" << endl;
        cin >> ucr;
 }
-Cirarea = Area(ucr);
-cout << Cirarea << endl;
+cirarea = Area(ucr);
+cout << cirarea << endl;
 
 return 0;
 }
