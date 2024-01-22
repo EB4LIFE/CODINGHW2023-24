@@ -16,4 +16,20 @@ double Area(int rad) {
 }
 
 int main() {
+    
+//variables for user's Rect and circle respectively
+    int url;
+    int uwl;
+    int ucr; //will be used for circle code
+//Asking user input for Length and width 
+    cout << "enter length and width of the rectangle:" << endl;
+    cin >> url >> uwl;
+//Making sure user inputted numbers whole and non negative numbers
+   while(url <=0 || uwl <=0) {
+       cout << "ERROR" << endl;
+       cin >> url >> uwl;
+ }
+
+
+
 }
