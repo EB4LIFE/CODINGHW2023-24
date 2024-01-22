@@ -29,7 +29,9 @@ int main() {
        cout << "ERROR" << endl;
        cin >> url >> uwl;
  }
-   
+//Calling function of Rect area and outpiting results using user input
+   Rectarea = Area(url, uwl);
+   cout << Rectarea << endl;
 
 
 }
