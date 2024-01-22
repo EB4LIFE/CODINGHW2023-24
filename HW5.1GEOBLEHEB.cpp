@@ -8,7 +8,7 @@ int Area(int rl, int rw) {
 }
 
 double Area(int rad) {
-    constant double PI = 3.14159;
+    const double PI = 3.14159;
     double Cirarea;
     Cirarea = PI * rad * rad;
     return Cirarea;
