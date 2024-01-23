@@ -1,6 +1,15 @@
 #include <iostream>
 using namespace std;
 
+bool isPrime(int pnum) {
+}
+
+int foundPrime(int num) {
+}
+
 int main () {
 
+int usernum
+cout << "Enter number of values:"
+cin >> usernum;
 }
