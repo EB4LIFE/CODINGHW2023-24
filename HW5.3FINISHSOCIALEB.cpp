@@ -52,12 +52,13 @@ int Checksum(int weight, int inID) {
 //Application of function in main 
 int main () {
   
-    int USERID;
+    int USERID; 
+    int sumid;
     int fullid; 
     cout << "enter your ID:" << endl;
     cin >> USERID;
-    
- 
+    sumid = Digitsum(USERID);
+    fullid = Checksum(sumid,
     cout << "your full ID is:"
     
   
