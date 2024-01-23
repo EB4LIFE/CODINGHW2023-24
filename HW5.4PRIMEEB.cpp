@@ -7,7 +7,7 @@ using namespace std;
 bool isPrime(int pnum) {
     bool isprime;
     for(int i = 2; i < pnum; i++) {
-        if (num1 % i == 0) { 
+        if (pnum % i == 0) { 
 		isprime = false; 
 		break;
 		}
@@ -27,7 +27,7 @@ int findPrime(int num) {
 			smallp = num; 
 		}
 		else { 
-			prime = false;
+			isprime = false;
 			++num; 
 		}
 	} while (isprime == false); 
@@ -39,7 +39,7 @@ int main () {
 int tablesize;
 srand( (unsigned)time(NULL) ); 
 int usernum;
-cout << "Enter number of values:"
+cout << "Enter number of values:" << endl;
 cin >> usernum;
 //If the number is negative, the program randomly chooses a number from 10-100
 if(usernum <0) {
