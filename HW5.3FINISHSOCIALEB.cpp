@@ -57,7 +57,10 @@ int main () {
     int fullid; 
     cout << "enter your ID:" << endl;
     cin >> USERID;
-    while(USERID > 10000000 
+    while(USERID < 10000000 || USERID > 99999999) {
+    cout << "ERROR" << endl;
+    cin >> USERID;
+}
     sumid = Digitsum(USERID);
     fullid = Checksum(sumid,USERID);
     cout << "your full ID is:"
