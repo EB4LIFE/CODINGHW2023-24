@@ -63,8 +63,8 @@ int main () {
 }
     sumid = Digitsum(USERID);
     fullid = Checksum(sumid,USERID);
-    cout << "your full ID is:"
-    Cout << fullid;
+    cout << "your full ID is:";
+    cout << fullid;
   
   return 0;
 }
