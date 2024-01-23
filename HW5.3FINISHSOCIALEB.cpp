@@ -58,9 +58,9 @@ int main () {
     cout << "enter your ID:" << endl;
     cin >> USERID;
     sumid = Digitsum(USERID);
-    fullid = Checksum(sumid,
+    fullid = Checksum(sumid,USERID);
     cout << "your full ID is:"
-    
+    Cout << fullid;
   
   return 0;
 }
