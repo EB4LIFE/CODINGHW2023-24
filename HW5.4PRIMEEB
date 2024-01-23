@@ -3,6 +3,9 @@
 using namespace std;
 
 bool isPrime(int pnum) {
+    int pnum;
+    bool isprime;
+    
 }
 
 int foundPrime(int num) {
