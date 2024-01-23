@@ -34,7 +34,7 @@ void perfectprint(int num=500) {
     if(IsPerfect == true) {
       cout << i << " ";
     }
-    if(IsPerfect == false) {
+    if(i == (num - 1)) {
       cout << endl;
     }
   }
