@@ -39,7 +39,11 @@ int Checksum(int weight, int inID) {
   int checksum;
   int one;
 
-  
+  one = weight % 10;
+  checksum = 10 - one;
+  FullID = (inID * 10) + checksum; 
+ 
+  return FullID;
   
 }
 
@@ -51,6 +55,9 @@ int main () {
     int USERID;
     cout << "enter your ID" << endl;
     cin >> USERID;
+ 
+    cout << "your full ID is:"
+    
   
   return 0;
 }
