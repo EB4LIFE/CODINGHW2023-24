@@ -2,13 +2,13 @@
 using namespace std;
 
 //Function that if called will give the area of rectangle with specified values
-int Area(int rl, int rw) {
+int area(int rl, int rw) {
       int Rectarea;
       Rectarea = rl * rw;
       return Rectarea;
 }
 //Function that if called will give the area of circle with specified values
-double Area(int rad) {
+double area(int rad) {
     const double PI = 3.14159;
     double Cirarea;
     Cirarea = PI * rad * rad;
@@ -24,7 +24,7 @@ int main() {
     int uwl;
     int ucr; //will be used for circle code
 //Asking user input for Length and width 
-    cout << "enter length and width of the rectangle:" << endl;
+    cout << " Enter length and width of the rectangle:" << endl;
     cin >> url >> uwl;
 //Making sure user inputted numbers whole and non negative numbers
    while(url <=0 || uwl <=0) {
@@ -32,17 +32,17 @@ int main() {
        cin >> url >> uwl;
  }
 //Calling function of Rect area and outpiting results using user input
-   rectarea = Area(url, uwl);
+   rectarea = area(url, uwl);
    cout << rectarea << endl;
 //Part 2 - same thing we did but with the circle function using user input variable ucr
-cout << "enter radius of cirlce:" << endl;
+cout << "Enter radius of the circle:" << endl;
 cin >> ucr;
 //same as before checking to make sure it fits our parameters as whole non negative number
 while(ucr<=0) {
   cout << "ERROR" << endl;
        cin >> ucr;
 }
-cirarea = Area(ucr);
+cirarea = area(ucr);
 cout << cirarea << endl;
 
 return 0;
