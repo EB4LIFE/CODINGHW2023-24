@@ -53,8 +53,10 @@ int Checksum(int weight, int inID) {
 int main () {
   
     int USERID;
+    int fullid; 
     cout << "enter your ID:" << endl;
     cin >> USERID;
+    
  
     cout << "your full ID is:"
     
