@@ -35,10 +35,11 @@ return sum;
 }
 //Function that is passed an id number and returns its correct check-sum.
 int Checksum(int weight, int inID) {
-  int FID;
+  int FullID;
   int checksum;
   int one;
 
+  
   
 }
 
