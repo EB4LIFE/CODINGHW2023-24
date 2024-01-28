@@ -27,6 +27,7 @@ int main() {
 	else {
 		cout << "NOT GOOD" << endl;
 	}
+	return 0;
 }
 //intilaizing the functions below
 void Fillarray(int arr[], const int size) {
