@@ -36,7 +36,7 @@ int main() {
 
 	combo = combocheck(vector1, v1, vector2, v2);
 	cout << "Result: " << combo << " times";
-
+return 0;
 }
 //intilaizing the functions below
 void Checkinput(int& userint, int limit) {
