@@ -1,31 +1,6 @@
 #include<iostream>
 using namespace std;
 
-/* 
-* The set difference between two sets s1 and s2 is the set that contains all
-elements in s1 that are not in s2. For example, if s1= {1,3,5,7,9} and
-s2={1,2,3,4,5}, then the set difference s1-s2={7,9}.
-Write a program that reads in 6 positive integers into the array set1 and 6
-positive integers into the array set2 and creates a third array called
-difference that contains the set difference of set1 and set2.
-If difference is not empty, the program prints out its elements. If difference
-is empty, then the program prints empty.
-You can assume that there are no repeating elements in either set, but
-the sets are not necessarily ordered.
-enter first 6 numbers:
-10 9 7 5 3 1
-enter next 6 numbers:
-6 5 4 3 2 1
-set difference is:
-10 9 7
-----------
-enter first 6 numbers:
-10 9 7 5 3 1
-enter next 6 numbers:
-1 3 5 7 9 10
-set difference is:
-empty
-*/
 void Fillarray(int arr[], const int size);
 bool checkDif(int e1, int arr2[], int size);
 void FillDif(int arr1[], int arr2[], int arrDif[], int size);
