@@ -20,6 +20,8 @@ int main() {
 	//will print amount of elements in the array
 	cout << "number of elements: " << leftover << endl;
 
+	return 0;
+
 }
 
 void Fillarray(int arr[], const int size) {
