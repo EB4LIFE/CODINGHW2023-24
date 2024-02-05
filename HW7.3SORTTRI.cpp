@@ -16,10 +16,10 @@ int main() {
 	int RT[trianglesize];
 	int triIndex;
 
-	cout << "enter the values:" << endl;
+	cout << "Enter the values:" << endl;
 	fillMatrix(matrix, matrixsize);
 
-	cout << "before sorted:" << endl;
+	cout << "Before sorted:" << endl;
 	printMatrix(matrix, matrixsize);
 	//this will be for moving the bottom left side of the matrix to a regular array to be sorted
 	//since we are ignoring the diagnal line we are starting at row index 1 instead of 0
@@ -63,7 +63,7 @@ int main() {
 			triIndex++;
 		}
 	}
-	cout << "sorted matrix:" << endl;
+	cout << "Sorted matrix:" << endl;
 	printMatrix(matrix, matrixsize); 
 
 	return 0;
@@ -78,8 +78,8 @@ void fillMatrix(int matrix[][10], int size) {
 	do { 
 		Error = false;		
 		for (int i = 0; i < size; i++) {
-			cin >> user;
 			for (int j = 0; j < size; j++) {
+			    cin >> user;
 				if (user > 0) {
 					matrix[i][j] = user;
 				}
