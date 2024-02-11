@@ -22,6 +22,13 @@ int main() {
 
 	return 0;
 }
+void fillMatrix(char matrix[][letters], int rows) {
+	for (int i = 0; i < rows; i++) {
+		for (int j = 0; j < letters; j++) {
+			cin >> matrix[i][j];
+		}
+	}
+}
 //will take compare words and swap words and sort them compltley into order
 void bubbleSort(char words[][letters], int rows) {
 	int sort; 
