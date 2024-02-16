@@ -1,10 +1,11 @@
 #include <iostream>
+#include <cctype> 
 using namespace std;
 
 const int words = 10;
 const int letters = 5;
 
-void fillMatrix(char matrix[][letters], int rows);
+bool fillMatrix(char matrix[][letters], int rows);
 void bubbleSort(char words[][letters], int rows);
 bool compareWords(char w1[], char w2[], int wLen);
 void swapWords(char w1[], char w2[], int wLen);
@@ -13,21 +14,26 @@ void printMatrix(const char matrix[][letters], int rows);
 int main() {
     char Wlist[words][letters];
     cout << "Enter 10 words:" << endl;
-    fillMatrix(Wlist, words);
+    if(fillMatrix(Wlist, words)) {
     bubbleSort(Wlist, words);
     cout << "After sorting:" << endl;
     printMatrix(Wlist, words);
+    }
     return 0;
 }
 
-void fillMatrix(char matrix[][letters], int rows) {
+bool fillMatrix(char matrix[][letters], int rows) {
     for (int i = 0; i < rows; i++) {
-        for (int j = 0; j < letters; j++) {
+       for (int j = 0; j < letters; j++) {
             cin >> matrix[i][j];
-        }
+            if ((matrix[i][j] >= 'A') && (matrix[i][j] <= 'Z'))  {
+                cout << "ERROR" << endl;
+                return false;
+            }
+       }
     }
+    return true;
 }
-
 void bubbleSort(char words[][letters], int rows) {
     int sort;
     int i;
