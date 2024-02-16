@@ -1,36 +1,51 @@
 #include<iostream>
 using namespace std;
-
+//function for this question we use intlilize below
 void printAll(int* classrooms, int size);
+//prints all classrooms in the list
 void newClass(int* roomList, int& size, int newRoom);
+//add new classrooms to list
 void insertSort(int* classes, int size, int newClass);
+//add new class (classroom) to sorted classroom
 void delClass(int* roomList, int& size, int delRoom);
+//deletes classrom
 int* searchClass(int* classList, int size, int roomSearch);
+//searches for the classrooom and we use a pointer to point to its location
 void printCode(int* classList, int size, int classCode);
+//code for the particular classroom
 
 
 int main() {
 
 	int database[50];
+	//this array stores classroom codes
 	int classCounter = 0;
-	int userinput;
+	//counters for numbers of classrooms in array database
+	int userinput; 
+	//input for enum menu selection
 	int classInput;
+	//input for class code
 	int codeInput;
+	//input for special machon lev code
 	int* pDatabase = database, * classAddress;
-
+	//this points to array database array 
+	//and to the address of a specfic classrom
+	
 	enum ACTION { ADD, DELETE, SEARCH, CODE_PRINT, ALL_PRINT }; 
-
+    //eneum selections
 	cout << "Enter 0 to add a new classroom." << endl;
 	cout << "Enter 1 to delete a hybrid classroom." << endl;
 	cout << "Enter 2 to search for a specific classroom." << endl;
-	cout << "Enter 3 to print all the classsrooms for a specific Machon." << endl;
+	cout << "Enter 3 to print all the classrooms for a specific Machon." << endl;
 	cout << "Enter 4 to print all the hybrid classrooms." << endl;
 	cout << "Enter 5 to exit." << endl;
 
 	cout << "Enter your choice:" << endl;
 	cin >> userinput;
-	//now checking if user entered a valid option
+	
+	
 	while (userinput != 5) { 
+	    //now checking if user entered a valid option
 		if ((userinput > 4) || (userinput < 0)) { 
 			cout << "ERROR" << endl;
 			cin >> userinput;
@@ -38,21 +53,24 @@ int main() {
 		}
 		switch (userinput) {
 
-		case ADD: //case 0
+		case ADD: //case 0 and new classroom 
 			cout << "Enter the code of the classroom to add:" << endl;
 			cin >> classInput;
+			//we will now try and validate classroom code
 			if ((classInput / 1000) % 11) { 
 				cout << "ERROR" << endl;
 				cin >> classInput;
 				break;
 			}
 			else {
-				newClass(pDatabase, classCounter, classInput); //sending array and new element to be added to the array
-				printAll(pDatabase, classCounter); //printing all the current elements in the database
+				newClass(pDatabase, classCounter, classInput); 
+				//sending array and new element to be added to the array
+				printAll(pDatabase, classCounter); 
+				//printing all the current elements in the database
 				break;
 			}
 
-		case DELETE: //case 1
+		case DELETE: //case 1 and delete classroom 
 			cout << "Enter the code of the classroom to delete:" << endl;
 			cin >> classInput;
 			if ((classInput / 1000) % 11) { 
@@ -62,16 +80,20 @@ int main() {
 			}
 			else {
 				delClass(pDatabase, classCounter, classInput);
+				//delete
 				printAll(pDatabase, classCounter); 
+				//reprint
 				break;
 			}
 
-		case SEARCH: //case 2 
+		case SEARCH: //case 2 and search classroom 
 			cout << "Enter the code of the classroom to search for:" << endl;
 			cin >> classInput;
 
-			classAddress = searchClass(pDatabase, classCounter, classInput); //sending the class number to see if it's in the database and storing the address if found
-			if (classAddress == NULL) { //if it wasn't found will return a null value
+			classAddress = searchClass(pDatabase, classCounter, classInput); 
+			//sending the class number to see if it's in the database and storing the address if found
+			if (classAddress == NULL) { 
+			    //if it wasn't found will return a null value
 				cout << "Not found" << endl;
 			}
 			else { 
@@ -79,7 +101,7 @@ int main() {
 			}
 			break;
 
-		case CODE_PRINT: //case 3
+		case CODE_PRINT: //case 3 and print all classroom for specfic machon
 			cout << "Enter the code of the Machon:" << endl;
 			cin >> codeInput;
 
@@ -96,7 +118,7 @@ int main() {
 				break;
 			}
 
-		case ALL_PRINT: //case  4 
+		case ALL_PRINT: //case  4 and new classroom 
 			printAll(pDatabase, classCounter);
 			break;
 		}
@@ -107,11 +129,13 @@ int main() {
 	return 0;
 }
 
+//fucntion to print using pointers
 void printAll(int* classrooms, int size) {
-
+    //print value at current pointer location
 	for (int* p = classrooms; p < (classrooms + size); p++) { 
 		cout << *p << " ";
 	}
+	//move to the next line
 	cout << endl;
 }
 
@@ -213,4 +237,3 @@ void printCode(int* classList, int size, int classCode) {
 		}
 	}
 }
-
