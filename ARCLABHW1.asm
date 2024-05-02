@@ -1,3 +1,1 @@
-.data
-Array1 
-Array2
+beq
